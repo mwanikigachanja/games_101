@@ -27,7 +27,7 @@ def play_blackjack():
     dealer_hand = []
 
     # Betting
-    bet = st.number_input("Place your bet:", min_value=1, value=10, step=1)
+    bet = st.number_input("Place your bet:", min_value=1, value=10, step=1, key='bet')
     st.write(f"Your bet: {bet}")
 
     # Initial deal
@@ -41,7 +41,7 @@ def play_blackjack():
 
     # Player's turn
     while calculate_hand(player_hand) < 21:
-        action = st.selectbox("Choose an action:", ('Hit', 'Stand') key='action')
+        action = st.selectbox("Choose an action:", ('Hit', 'Stand'), key='action')
         if action == 'Hit':
             player_hand.append(deal_card())
             st.write(f"Player hits. Player's Hand: {player_hand}, Total: {calculate_hand(player_hand)}")
