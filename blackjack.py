@@ -41,7 +41,7 @@ def play_blackjack():
 
     # Player's turn
     while calculate_hand(player_hand) < 21:
-        action = st.selectbox("Choose an action:", ('Hit', 'Stand'))
+        action = st.selectbox("Choose an action:", ('Hit', 'Stand') key='action')
         if action == 'Hit':
             player_hand.append(deal_card())
             st.write(f"Player hits. Player's Hand: {player_hand}, Total: {calculate_hand(player_hand)}")
