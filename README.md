@@ -1,5 +1,5 @@
 ```
-# Blackjack Game with Streamlit
+# Blackjack Game with Streamlit V1.0
 
 This is a simple implementation of the classic Blackjack card game using Python and Streamlit. 
 
